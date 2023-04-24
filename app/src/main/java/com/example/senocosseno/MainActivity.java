@@ -21,10 +21,10 @@ TextView res;
         res = findViewById(R.id.resultado);
     }
     public void calcular(View v){
-        int angA = Integer.parseInt(AnguloA.getText().toString());
-        int B = Integer.parseInt(LadoB.getText().toString());
-        int C = Integer.parseInt(LadoC.getText().toString());
-           double A = Math.sqrt((B*B)+(C*C)-2*B*C*Math.cos(angA));
+        double angA = Double.parseDouble(String.valueOf(AnguloA));
+        double B = Integer.parseInt(LadoB.getText().toString());
+        double C = Integer.parseInt(LadoC.getText().toString());
+           double A = Math.sqrt((B*B)+(C*C)-2*B*C*angA);
            String result = String.valueOf(A);
 
             res.setText(result);

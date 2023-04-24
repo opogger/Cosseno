@@ -10,18 +10,16 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="108dp"
         android:fontFamily="@font/abeezee"
         android:text="Achando o lado A"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.154" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -32,7 +30,7 @@
         android:text="Lei Dos Cossenos"
         android:textColor="#000000"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -42,68 +40,69 @@
         android:id="@+id/resultado"
         android:layout_width="181dp"
         android:layout_height="50dp"
-        android:layout_marginStart="115dp"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="115dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
-
-    <EditText
-        android:id="@+id/AnguloA"
-        android:layout_width="221dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:hint="Ângulo do lado A"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintVertical_bias="0.089" />
 
     <EditText
         android:id="@+id/LadoB"
         android:layout_width="227dp"
         android:layout_height="54dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="100dp"
+        android:layout_marginBottom="28dp"
         android:ems="10"
         android:hint="Lado B"
         android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/LadoC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AnguloA" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/LadoC"
         android:layout_width="227dp"
         android:layout_height="56dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="28dp"
         android:layout_marginEnd="100dp"
         android:ems="10"
         android:hint="Lado C"
         android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LadoB" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="288dp"
         android:onClick="calcular"
         android:text="Calcular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LadoC"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <EditText
+        android:id="@+id/AnguloA"
+        android:layout_width="232dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Angulo A em cosseno"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/LadoB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.594" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
