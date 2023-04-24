@@ -21,10 +21,12 @@ TextView res;
         res = findViewById(R.id.resultado);
     }
     public void calcular(View v){
-        double angA = Double.parseDouble(String.valueOf(AnguloA));
+        double angA = Double.parseDouble(AnguloA.getText().toString());
+        double grauA = Math.toRadians(angA);
+        double cosA = Math.cos(grauA);
         double B = Integer.parseInt(LadoB.getText().toString());
         double C = Integer.parseInt(LadoC.getText().toString());
-           double A = Math.sqrt((B*B)+(C*C)-2*B*C*angA);
+           double A = Math.sqrt((B*B)+(C*C)-2*B*C*cosA);
            String result = String.valueOf(A);
 
             res.setText(result);
